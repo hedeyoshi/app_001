@@ -1,19 +1,19 @@
 <template>
-  <div class="foot">
+  <div class="legs">
     あし
   </div>
 </template>
 
 <script>
 export default {
-  name: 'Foot',
+  name: 'Legs',
   props: {},
 };
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
-.foot {
+.legs {
   position: absolute;
   bottom: 0;
   background-color: #fff;

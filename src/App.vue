@@ -4,7 +4,7 @@
     <div class="body">
       <Head />
       <Arms />
-      <Foot />
+      <Legs />
     </div>
   </div>
 </template>
@@ -12,14 +12,14 @@
 <script>
 import Head from './components/Head.vue';
 import Arms from './components/Arms.vue';
-import Foot from './components/Foot.vue';
+import Legs from './components/Legs.vue';
 
 export default {
   name: 'app',
   components: {
     Head,
     Arms,
-    Foot,
+    Legs,
   },
 };
 </script>
