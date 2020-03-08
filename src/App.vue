@@ -1,6 +1,8 @@
 <template>
   <div id="app">
-    <div class="swipe"></div>
+    <div class="swipe">
+      <span>スワイプ</span>
+    </div>
     <div class="body">
       <Head />
       <Arms />
@@ -157,32 +159,45 @@ table {
 }
 
 #app {
-  $color-line: #39200f;
-  $color-body: #da00ff;
-  $color-bg: #e3ff00;
-
+  --color-line: #39200f;
+  --color-body: #da00ff;
+  --color-bg: #e3ff00;
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: $color-line;
-  background-color: $color-bg;
+  color: var(--color-line);
+  background-color: var(--color-bg);
   padding: 16px;
   min-height: 100vh;
   .swipe {
-    &::after {
-      content: '';
+    display: block;
+    height: 40vh;
+    padding-top: 32px;
+    span {
+      position: relative;
+      top: 80px;
       display: block;
-      height: 40vh;
+      font-weight: bold;
+      font-size: 24px;
+    }
+    &::before {
+      content: '';
+      width: 0;
+      height: 0;
+      border-right: 48px solid transparent;
+      border-left: 48px solid transparent;
+      border-bottom: 72px solid var(--color-line);
     }
   }
   .body {
     position: relative;
     width: 100%;
-    height: 3000px;
-    border-radius: 94px;
-    background: $color-body;
-    border: 16px solid $color-line;
+    height: 30000px;
+    margin-bottom: 20500px;
+    border-radius: 72px;
+    background: var(--color-body);
+    border: 16px solid var(--color-line);
   }
 }
 </style>
